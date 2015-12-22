@@ -1,0 +1,5 @@
+Most of the fonctionnality are there, left to do :
+- The method make_move return the outcome, which his the symbol of the boat if it's an hit, we should use that to apply ship.hit on it and reduce the health by one.
+- Create a method on ship that check after a hit if the ship is sunk
+- Create a function or a method on ship (I don't know what is the best) to check if every boat are sunk
+- Create the actual game using our classes, may be it will a class (gameEngine) or a function a class necessarly needed

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row"><h3>My Library - Search an author</h3></div>
+    
+    <div class="row" style="margin-top:20px">
+        <div class="col-md-12">
+         <form role="form" action="" method="POST">
+          <div class="form-group">
+              <label for="author">Author</label>
+              <select class="form-control" name="author">
+                  {%- for i in authors %}
+                      <option value="{{ i.id }}">{{ i.name }}</option>
+                  {%- endfor %}
+              </select>
+          </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+        </div>
+      </div>
+     {% if books %}
+     <h3>Results for {{ author_name }}</h3>
+      <div class="panel panel-default">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ISBN</th>
+            <th>TITLE</th>
+          </tr>
+        </thead>
+        {% for book in books %}
+        <tbody>
+          <tr>
+            <td>{{ book.isbn }}</td>
+            <td>{{ book.title }}</td>
+          </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+    </div>
+    {% endif %}
+    <a href="/">Add a book</a>    
+</div>
+
+{% endblock %}

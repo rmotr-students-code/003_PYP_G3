@@ -1,0 +1,5 @@
+Notes:
+
+It should populate authors dynamically. [CHECK]
+It should save a new book on the database when the user submits it.
+It has to check for errors. For example, if some field is empty.
